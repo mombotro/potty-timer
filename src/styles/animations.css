@@ -1,0 +1,295 @@
+/* src/styles/animations.css */
+
+@keyframes confetti-fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(150px) rotate(720deg); opacity: 0; }
+  }
+  
+  .confetti {
+    animation: confetti-fall 3s ease-out forwards;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .float-delay {
+    animation: float 9s 1s ease-in-out infinite;
+  }
+  
+  .float-slow {
+    animation: float 12s ease-in-out infinite;
+  }
+  
+  .float-delay-slow {
+    animation: float 14s 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-slow {
+    0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.7); }
+  }
+  
+  .pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+  
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+  }
+  
+  .wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+  
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+  }
+  
+  /* Additional custom styles for the timer */
+  .timer-circle {
+    background-color: white;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    border: 8px solid #93c5fd;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  }
+  
+  .timer-display {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+  }
+  
+  .btn-start {
+    background: linear-gradient(to right, #22c55e, #16a34a);
+    color: white;
+  }
+  
+  .btn-reset {
+    background: linear-gradient(to right, #94a3b8, #64748b);
+    color: white;
+  }
+  
+  .btn-debug {
+    background: #dbeafe;
+    color: #2563eb;
+  }
+  
+  .star-counter {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #fef08a;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 2px solid #fde047;
+  }
+  
+  .star-count {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #854d0e;
+    margin: 0 0.5rem;
+  }
+  
+  .btn-sound {
+    background-color: white;
+    color: #2563eb;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  
+  .interval-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  
+  .btn-interval {
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: transform 0.2s;
+    border: 4px solid #93c5fd;
+    color: #2563eb;
+    background-color: white;
+  }
+  
+  .btn-interval:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn-interval.active {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  .custom-time-input {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 0 1.5rem;
+    justify-content: center;
+  }
+  
+  .time-input {
+    padding: 0.75rem;
+    border: 4px solid #93c5fd;
+    border-radius: 0.75rem;
+    width: 10rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2563eb;
+  }
+  
+  .btn-set {
+    background: linear-gradient(to right, #22c55e, #3b82f6);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .toilet-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto 2rem;
+  }
+  
+  .toilet-svg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+  }
+  
+  .potty-message {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #ec4899, #8b5cf6, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 2s infinite;
+  }
+  
+  .result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .btn-again {
+    background: linear-gradient(to right, #fb923c, #ef4444);
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-success {
+    background: linear-gradient(to right, #22c55e, #059669);
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .result-icon {
+    margin-right: 0.75rem;
+  }
+  
+  .confetti-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .confetti-piece {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+  }
+  
+  .bg-decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .decoration {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+  
+  .audio-notice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    z-index: 50;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }

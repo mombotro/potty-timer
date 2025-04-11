@@ -1,0 +1,38 @@
+/* src/index.css */
+@import "@picocss/pico/css/pico.min.css";
+
+/* Custom theme variables */
+:root {
+  --primary: #7e3af2;
+  --primary-hover: #6c2bd9;
+  --secondary: #4c1d95;
+  --secondary-hover: #5b21b6;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Custom styles */
+body {
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #e9d5ff, #dbeafe, #dcfce7);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 640px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.app-title {
+  background: linear-gradient(to right, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
